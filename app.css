@@ -1,0 +1,227 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;700;900&display=swap");
+:root {
+  --gray-900: #1f2933;
+  --gray-800: #323f4b;
+  --gray-700: #3e4c59;
+  --gray-600: #52606d;
+  --gray-500: #616e7c;
+  --gray-400: #7b8794;
+  --gray-300: #9aa5b1;
+  --gray-200: #cbd2d9;
+  --gray-100: #cbd2d9;
+  --gray-50: #f5f7fa;
+}
+
+body {
+  font-family: "Inter Tight", Arial, Helvetica, sans-serif;
+}
+
+.text-gray-900 {
+  color: #1f2933 !important;
+}
+
+.bg-gray-900 {
+  background-color: #1f2933 !important;
+}
+
+.text-gray-800 {
+  color: #323f4b !important;
+}
+
+.bg-gray-800 {
+  background-color: #323f4b !important;
+}
+
+.text-gray-700 {
+  color: #3e4c59 !important;
+}
+
+.bg-gray-700 {
+  background-color: #3e4c59 !important;
+}
+
+.text-gray-600 {
+  color: #52606d !important;
+}
+
+.bg-gray-600 {
+  background-color: #52606d !important;
+}
+
+.text-gray-500 {
+  color: #616e7c !important;
+}
+
+.bg-gray-500 {
+  background-color: #616e7c !important;
+}
+
+.text-gray-400 {
+  color: #7b8794 !important;
+}
+
+.bg-gray-400 {
+  background-color: #7b8794 !important;
+}
+
+.text-gray-300 {
+  color: #9aa5b1 !important;
+}
+
+.bg-gray-300 {
+  background-color: #9aa5b1 !important;
+}
+
+.text-gray-200 {
+  color: #cbd2d9 !important;
+}
+
+.bg-gray-200 {
+  background-color: #cbd2d9 !important;
+}
+
+.text-gray-100 {
+  color: #cbd2d9 !important;
+}
+
+.bg-gray-100 {
+  background-color: #cbd2d9 !important;
+}
+
+.text-gray-50 {
+  color: #f5f7fa !important;
+}
+
+.bg-gray-50 {
+  background-color: #f5f7fa !important;
+}
+
+.text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.text-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
+.text-5xl {
+  font-size: 3rem;
+  line-height: 1;
+}
+
+.text-6xl {
+  font-size: 3.75rem;
+  line-height: 1;
+}
+
+.text-7xl {
+  font-size: 4.5rem;
+  line-height: 1;
+}
+
+.text-8xl {
+  font-size: 6rem;
+  line-height: 1;
+}
+
+.text-9xl {
+  font-size: 8rem;
+  line-height: 1;
+}
+
+.box-shadow-sm {
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.box-shadow-base {
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+}
+
+.box-shadow-md {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+}
+
+.box-shadow-lg {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+}
+
+.box-shadow-xl {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+}
+
+.box-shadow-2xl {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.list-services {
+  list-style: none;
+  padding: 0;
+}
+.list-services li {
+  display: flex;
+  align-items: center;
+}
+.list-services li::before {
+  content: "";
+  display: inline-block;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-right: 0.5rem;
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" fill="green" class="bi bi-check2-all" viewBox="0 0 16 16"><path d="M12.354 4.354a.5.5 0 0 0-.708-.708L5 10.293 1.854 7.146a.5.5 0 1 0-.708.708l3.5 3.5a.5.5 0 0 0 .708 0l7-7zm-4.208 7-.896-.897.707-.707.543.543 6.646-6.647a.5.5 0 0 1 .708.708l-7 7a.5.5 0 0 1-.708 0z"/><path d="m5.354 7.146.896.897-.707.707-.897-.896a.5.5 0 1 1 .708-.708z"/></svg>');
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.py-5rem {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.lh-normal {
+  line-height: normal;
+}
+
+.img-floated {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: calc(75% - 5rem);
+}
+
+.page-header {
+  padding: 1.5rem 0;
+}
+
+/*# sourceMappingURL=app.css.map */
