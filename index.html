@@ -18,16 +18,67 @@
     <link rel="stylesheet" href="plugins/owl.carousel.min.css" />
   </head>
   <body>
-    <header class="py-3 bg-gray-800">
-      <div class="container position-relative">
-        <img src="images/logo.png" alt="Organizar" height="85" />
+    <header class="py-3 bg-gray-800 position-relative">
+      <div class="container">
+        <div class="row align-items-center justify-content-between">
+          <div class="col-sm-auto">
+            <a
+              href="/"
+              class="d-inline-block text-decoration-none mb-2 mb-xl-0"
+            >
+              <img src="images/logo.png" alt="Organizar" height="85" />
+            </a>
+          </div>
+          <div class="col-sm-auto order-xl-last">
+            <button type="button" class="btn btn-primary">
+              Seja um parceiro
+            </button>
+          </div>
+          <div class="col-xl">
+            <ul class="nav nav-centered mb-2 mb-xl-0">
+              <li>
+                <a href="#seguranca" class="nav-link px-2"
+                  >Segurança do trabalho</a
+                >
+              </li>
+              <li>
+                <a href="#incendio" class="nav-link px-2"
+                  >Projetos de Incêndio</a
+                >
+              </li>
+              <li>
+                <a href="#ambiente" class="nav-link px-2">Meio Ambiente</a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </header>
 
-    <section class="py-5rem">
+    <section class="py-5rem hero-section">
       <div class="container">
+        <div class="text-center" style="margin-bottom: 5rem">
+          <h1 class="display-4 fw-bold mb-0 text-gray-800">Engenharia</h1>
+          <p class="mb-4">Occaecat sit proident occaecat aute ipsum.</p>
+          <div class="row">
+            <div class="col">
+              <h2 class="mb-0 text-success">10+</h2>
+              <small>Anos de experiencia</small>
+            </div>
+            <div class="col">
+              <h2 class="mb-0 text-success">2000+</h2>
+              <small>Clientes atendidos</small>
+            </div>
+            <div class="col">
+              <h2 class="mb-0 text-success">500+</h2>
+              <small>Projetos</small>
+            </div>
+          </div>
+          <hr style="border-color: var(--gray-300)" />
+        </div>
         <div
-          class="card card-body border-0 bg-light box-shadow-lg p-0 overflow-hidden rounded-4"
+          id="seguranca"
+          class="card card-body bg-light shadow p-0 border-0 overflow-hidden rounded-4"
         >
           <h1 class="fw-bolder text-gray-800 display-5 px-5 pt-5">
             Segurança do Trabalho
@@ -69,8 +120,7 @@
             <div class="col">
               <img
                 src="images/seguranca.jpg"
-                class="img-fluid"
-                style="border-top-left-radius: 1rem"
+                class="img-thumbnail-top"
                 alt="Segurança do trabalho"
               />
             </div>
@@ -78,7 +128,7 @@
         </div>
       </div>
     </section>
-    <section class="bg-gray-50 py-5rem">
+    <section class="bg-gray-50 py-5rem" id="incendio">
       <div class="container">
         <div class="row align-items-center">
           <div class="col">
@@ -127,7 +177,7 @@
         </div>
       </div>
     </section>
-    <section class="bg-gray-100 py-5rem">
+    <section class="bg-gray-100 py-5rem" id="ambiente">
       <div class="container">
         <div class="row align-items-center">
           <div class="col">
@@ -179,9 +229,19 @@
 
     <section class="bg-gray-400 py-5">
       <div class="container">
-        <h1 class="mb-0 fw-bold text-4xl">Organizar</h1>
-        <p>Anim elit consequat dolore qui irure laboris non duis ut.</p>
-        <hr />
+        <div class="d-flex align-items-center justify-content-between">
+          <div>
+            <h1 class="mb-1 fw-bold text-4xl">Grupo Organizar</h1>
+            <address class="mb-0">
+              R. Francisco Soraggi, 15 - Santa Luzia, Formiga - MG
+            </address>
+          </div>
+          <div class="d-inline-flex align-items-center">
+            <i class="bi bi-instagram fs-3 me-3"></i>
+            <i class="bi bi-whatsapp fs-3 me-2"></i>
+          </div>
+        </div>
+        <hr style="margin: 2rem 0" />
         <footer class="owl-carousel bg-gray-400">
           <img src="images/logos/logo-1.png" />
           <img src="images/logos/logo-2.jpg" />

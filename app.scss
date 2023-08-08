@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;700;900&display=swap");
+
 :root {
   --gray-900: #1f2933;
   --gray-800: #323f4b;
@@ -111,9 +112,40 @@ body {
 .lh-normal {
   line-height: normal;
 }
+.img-thumbnail {
+  padding: 0.35rem;
+  --bs-border-color: var(--gray-100);
+}
 .img-floated {
   position: absolute;
   bottom: 0;
   left: 0;
   width: calc(75% - 5rem);
+}
+.img-thumbnail-top {
+  padding-top: 0.35rem;
+  padding-left: 0.35rem;
+  background-color: var(--bs-body-bg);
+  border-top: var(--bs-border-width) solid var(--gray-100);
+  border-left: var(--bs-border-width) solid var(--gray-100);
+  border-top-left-radius: 1rem;
+  max-width: 100%;
+  height: auto;
+}
+@media (min-width: 1200px) {
+  .nav-centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    .nav-link {
+      --bs-nav-link-color: var(--gray-200);
+      --bs-nav-link-hover-color: var(--gray-300);
+    }
+  }
+}
+.hero-section {
+  background: url("plugins/backgrund.png");
+  background-size: cover;
+  background-position: center;
 }
