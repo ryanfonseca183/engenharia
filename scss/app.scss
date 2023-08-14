@@ -74,21 +74,6 @@ $shadows: (
 body {
   font-family: "Inter Tight", Arial, Helvetica, sans-serif;
 }
-.owl-carousel {
-  .owl-item {
-    background: var(--gray-400);
-    img {
-      max-width: 100%;
-      height: 5rem;
-      object-fit: contain;
-      margin: 0 auto;
-      mix-blend-mode: multiply;
-      width: auto !important;
-      filter: grayscale(100%);
-    }
-  }
-}
-
 .list-services {
   list-style: none;
   padding: 0;

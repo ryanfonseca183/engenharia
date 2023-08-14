@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Organizar Engenharia</title>
+    <link rel="stylesheet" href="css/home.css" />
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.0/dist/jquery.min.js"></script>
+    <link rel="stylesheet" href="plugins/owl.carousel.min.css" />
+  </head>
+  <body>
+    <section>
+      <div class="img-overlay">
+        <img class="img" alt="Imagem de fundo" />
+      </div>
+      <header>
+        <nav class="page-navigation">
+          <a
+            href="https://wa.me/5537999881070?text=Ol%C3%A1%21+Eu+gostaria+de+fazer+um+or%C3%A7amento"
+            target="_blank"
+          >
+            <img src="icons/whatsapp.svg" alt="Whatsapp" />
+          </a>
+          <a href="https://www.instagram.com/grupoorganizar/" target="_blank">
+            <img src="icons/insta.svg" alt="Instagram" />
+          </a>
+          <a href="https://goo.gl/maps/2YBn3XLhFPnfomYe7" target="_blank">
+            <img
+              src="icons/location.svg"
+              alt="Localização"
+              style="height: calc(2.5rem - 2px)"
+            />
+          </a>
+          <a href="tel:+553734431075"
+            ><img
+              src="icons/phone.svg"
+              alt="Localização"
+              style="height: calc(2.5rem - 2px)"
+          /></a>
+        </nav>
+        <a href="#" class="btn from-center"><span>Seja um parceiro</span></a>
+      </header>
+      <img src="images/logo.png" alt="Organizar Engenharia" class="logo" />
+      <main>
+        <div class="promos">
+          <div
+            class="promo"
+            data-title="Loja virtual"
+            data-color="#14a6df40"
+            data-prefix="loja"
+            data-count="3"
+            data-color="hotpink"
+            style="--overlay-color: #14a6df"
+          >
+            <div class="image-wrapper">
+              <img src="images/home/loja/img-1.jpg" />
+            </div>
+            <h2 class="title">Loja Virtual</h2>
+          </div>
+          <div
+            class="promo"
+            data-title="Engenharia e Consultoria"
+            data-color="#87c43f40"
+            data-prefix="engenharia"
+            data-count="6"
+            style="--overlay-color: #87c43f"
+          >
+            <div class="image-wrapper">
+              <img src="images/home/engenharia/img-1.jpg" />
+            </div>
+            <h2 class="title">Engenharia</h2>
+          </div>
+          <div
+            class="promo"
+            data-title="Execução de sistemas de combate à incêndio"
+            data-color="#f6911e40"
+            data-prefix="execucao"
+            data-count="4"
+            data-count
+            style="--overlay-color: #f6911e"
+          >
+            <div class="image-wrapper">
+              <img src="images/home/execucao/img-1.jpg" />
+            </div>
+            <h2 class="title">Execução</h2>
+          </div>
+          <div
+            class="promo"
+            data-title="Recarga e manutenção de extintores de incêndio"
+            data-color="#ed1d2340"
+            data-prefix="recarga"
+            data-count="2"
+            style="--overlay-color: #ed1d23"
+          >
+            <div class="image-wrapper">
+              <img src="images/home/recarga/img-1.jpg" />
+            </div>
+            <h2 class="title">Recarga</h2>
+          </div>
+        </div>
+        <h1 class="promo-title">Engenharia</h1>
+      </main>
+    </section>
+    <footer class="owl-carousel">
+      <img src="images/logos/logo-1.webp" />
+      <img src="images/logos/logo-2.png" />
+      <img src="images/logos/logo-3.png" />
+      <img src="images/logos/logo-4.png" />
+      <img src="images/logos/logo-5.webp" />
+      <img src="images/logos/logo-6.png" />
+      <img src="images/logos/logo-7.jpg" />
+      <img src="images/logos/logo-8.png" />
+      <img src="images/logos/logo-9.jpg" />
+      <img src="images/logos/logo-10.png" />
+      <img src="images/logos/logo-11.png" />
+      <img src="images/logos/logo-12.jpg" />
+      <img src="images/logos/logo-13.jpeg" />
+      <img src="images/logos/logo-14.jpg" />
+      <img src="images/logos/logo-15.png" />
+      <img src="images/logos/logo-16.png" />
+      <img src="images/logos/logo-17.jpg" />
+      <img src="images/logos/logo-18.png" />
+      <img src="images/logos/logo-19.jpg" />
+    </footer>
+    <script src="plugins/jquery.min.js"></script>
+    <script src="plugins/owl.carousel.min.js"></script>
+    <script>
+      $(".owl-carousel").owlCarousel({
+        loop: true,
+        dots: false,
+        autoplay: true,
+        autoplayTimeout: 3000,
+        responsive: {
+          0: {
+            items: 3,
+          },
+          500: {
+            items: 4,
+          },
+          600: {
+            items: 6,
+          },
+          1000: {
+            items: 8,
+          },
+          1200: {
+            items: 10,
+          },
+        },
+      });
+    </script>
+    <script>
+      let counter = 0;
+      $(".promo").on("mouseenter", function (e) {
+        const el = $(this);
+        $(".promo-title").text(el.data("title")).addClass("show");
+        counter = (counter % Number(el.data("count"))) + 1;
+        const src = `images/home/${el.data("prefix")}/img-${counter}.jpg`;
+        el.addClass("show");
+        $(".img-overlay")
+          .css({ "--bg": el.data("color") })
+          .addClass("show")
+          .find("img")
+          .prop("src", src);
+      });
+      $(".promo").on("mouseleave", function () {
+        $(".show").removeClass("show");
+      });
+    </script>
+  </body>
+</html>
