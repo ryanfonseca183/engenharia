@@ -1,0 +1,16 @@
+footer {
+  overflow: hidden;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  padding: 1rem;
+  background: lightgray;
+  img {
+    height: 5rem;
+    object-fit: cover;
+    width: auto;
+    margin-left: 1.5rem;
+    mix-blend-mode: multiply;
+    filter: grayscale(100%);
+  }
+}

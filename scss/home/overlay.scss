@@ -1,0 +1,28 @@
+.img-overlay {
+  --bg: rgba(137, 47, 29, 0.5);
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 100vw;
+  height: 100vw;
+  opacity: 0;
+  transition: opacity 0.25s;
+  z-index: -1;
+}
+.img-overlay::before {
+  content: "";
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  background: var(--bg);
+  position: absolute;
+  z-index: 1;
+}
+.img-overlay.show {
+  opacity: 0.5;
+}
+.img-overlay img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

@@ -1,0 +1,153 @@
+@use "buttons";
+@import url("https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;700;900&display=swap");
+:root {
+  --gray-900: #1f2933;
+  --gray-800: #323f4b;
+  --gray-700: #3e4c59;
+  --gray-600: #52606d;
+  --gray-500: #616e7c;
+  --gray-400: #7b8794;
+  --gray-300: #9aa5b1;
+  --gray-200: #cbd2d9;
+  --gray-100: #cbd2d9;
+  --gray-50: #f5f7fa;
+}
+$colors: (
+  900: #1f2933,
+  800: #323f4b,
+  700: #3e4c59,
+  600: #52606d,
+  500: #616e7c,
+  400: #7b8794,
+  300: #9aa5b1,
+  200: #cbd2d9,
+  100: #cbd2d9,
+  50: #f5f7fa,
+);
+
+$sizes: "xs" 0.75rem 1rem, "sm" 0.875rem 1.25rem, "base" 1rem 1.5rem,
+  "lg" 1.125rem 1.75rem, "xl" 1.25rem 1.75rem, "2xl" 1.5rem 2rem,
+  "3xl" 1.875rem 2.25rem, "4xl" 2.25rem 2.5rem, "5xl" 3rem 1, "6xl" 3.75rem 1,
+  "7xl" 4.5rem 1, "8xl" 6rem 1, "9xl" 8rem 1;
+
+$shadows: (
+  "sm": 0 1px 2px 0 rgb(0 0 0 / 0.05),
+  "base": (
+    0 1px 3px 0 rgb(0 0 0 / 0.1),
+    0 1px 2px -1px rgb(0 0 0 / 0.1),
+  ),
+  "md": (
+    0 4px 6px -1px rgb(0 0 0 / 0.1),
+    0 2px 4px -2px rgb(0 0 0 / 0.1),
+  ),
+  "lg": (
+    0 10px 15px -3px rgb(0 0 0 / 0.1),
+    0 4px 6px -4px rgb(0 0 0 / 0.1),
+  ),
+  "xl": (
+    0 20px 25px -5px rgb(0 0 0 / 0.1),
+    0 8px 10px -6px rgb(0 0 0 / 0.1),
+  ),
+  "2xl": 0 25px 50px -12px rgb(0 0 0 / 0.25),
+);
+
+@each $weight, $color in $colors {
+  .text-gray-#{$weight} {
+    color: $color !important;
+  }
+  .bg-gray-#{$weight} {
+    background-color: $color !important;
+  }
+}
+@each $name, $size, $height in $sizes {
+  .text-#{$name} {
+    font-size: $size;
+    line-height: $height;
+  }
+}
+@each $size, $shadow in $shadows {
+  .box-shadow-#{$size} {
+    box-shadow: $shadow;
+  }
+}
+
+body {
+  font-family: "Inter Tight", Arial, Helvetica, sans-serif;
+}
+.owl-carousel {
+  .owl-item {
+    background: var(--gray-400);
+    img {
+      max-width: 100%;
+      height: 5rem;
+      object-fit: contain;
+      margin: 0 auto;
+      mix-blend-mode: multiply;
+      width: auto !important;
+      filter: grayscale(100%);
+    }
+  }
+}
+
+.list-services {
+  list-style: none;
+  padding: 0;
+  li {
+    display: flex;
+    align-items: center;
+    &::before {
+      content: "";
+      display: inline-block;
+      width: 1.25rem;
+      height: 1.25rem;
+      margin-right: 0.5rem;
+      background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" fill="green" class="bi bi-check2-all" viewBox="0 0 16 16"><path d="M12.354 4.354a.5.5 0 0 0-.708-.708L5 10.293 1.854 7.146a.5.5 0 1 0-.708.708l3.5 3.5a.5.5 0 0 0 .708 0l7-7zm-4.208 7-.896-.897.707-.707.543.543 6.646-6.647a.5.5 0 0 1 .708.708l-7 7a.5.5 0 0 1-.708 0z"/><path d="m5.354 7.146.896.897-.707.707-.897-.896a.5.5 0 1 1 .708-.708z"/></svg>');
+      background-repeat: no-repeat;
+      background-size: 100%;
+    }
+  }
+}
+.py-5rem {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+.lh-normal {
+  line-height: normal;
+}
+.img-thumbnail {
+  padding: 0.35rem;
+  --bs-border-color: var(--gray-100);
+}
+.img-floated {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: calc(75% - 5rem);
+}
+.img-thumbnail-top {
+  padding-top: 0.35rem;
+  padding-left: 0.35rem;
+  background-color: var(--bs-body-bg);
+  border-top: var(--bs-border-width) solid var(--gray-100);
+  border-left: var(--bs-border-width) solid var(--gray-100);
+  border-top-left-radius: 1rem;
+  max-width: 100%;
+  height: auto;
+}
+@media (min-width: 1200px) {
+  .nav-centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    .nav-link {
+      --bs-nav-link-color: var(--gray-200);
+      --bs-nav-link-hover-color: var(--gray-300);
+    }
+  }
+}
+.hero-section {
+  background: url("images/background.png");
+  background-size: cover;
+  background-position: center;
+}

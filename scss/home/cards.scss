@@ -1,0 +1,98 @@
+:root {
+  --size: 15vmin;
+  --duration: 300ms;
+  --ease-out: cubic-bezier(0.25, 1, 0.5, 1);
+  --bounce-out: cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.promos {
+  display: inline-flex;
+  flex-direction: column;
+  font-family: "Kanit", sans-serif;
+  color: white;
+  margin-top: auto;
+}
+.promo {
+  position: relative;
+  cursor: pointer;
+  width: var(--size);
+  height: var(--size);
+  border-radius: 2rem;
+  &:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+}
+.title {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  font-size: calc(var(--size) / 8);
+  font-weight: 700;
+  line-height: 1.2;
+  white-space: nowrap;
+  transform: translate(-10%, -50%);
+  pointer-events: none;
+  text-shadow: 0 0 5px black;
+}
+.image-wrapper {
+  width: var(--size);
+  height: var(--size);
+  overflow: hidden;
+  border-radius: 1.5rem;
+  clip-path: polygon(100% 0, 100% 50%, 100% 100%, 0% 100%, 0 50%, 0% 0%);
+  transition-property: transform, clip-path, border-radius;
+  transition-duration: var(--duration);
+  transition-timing-function: var(--ease-out);
+}
+.image-wrapper img {
+  position: relative;
+  width: 120%;
+  height: 100%;
+  object-fit: cover;
+  transform: translateX(-10%);
+  transition: transform var(--duration) var(--ease-out);
+}
+.image-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--overlay-color);
+  mix-blend-mode: multiply;
+  opacity: 0.75;
+  border-radius: 1.5rem;
+  transform: translateZ(0);
+  transition: opacity var(--duration) var(--ease-out);
+}
+.promo:hover img {
+  transform: translateX(0);
+}
+.promo:hover .image-wrapper {
+  clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+  transform: translateX(25%);
+  transition-timing-function: var(--bounce-out);
+  border-radius: 0;
+}
+.promo .title {
+  opacity: 1;
+  transition-property: transform, opacity;
+  transition-duration: 0.25s;
+}
+.promo:hover .title {
+  transform: translate(-10%, -100%);
+  opacity: 0;
+}
+.promo:hover .image-wrapper::after {
+  border-radius: 0;
+}
+.promo-title {
+  margin-top: auto;
+  margin-bottom: 1rem;
+  font-size: 3vw;
+  transform: translateY(calc(100% + 2rem));
+  transition: transform 0.25s ease;
+}
+.promo-title.show {
+  transform: translateY(0);
+}

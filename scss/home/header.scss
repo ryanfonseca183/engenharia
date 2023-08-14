@@ -1,0 +1,14 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 0;
+}
+.page-navigation {
+  display: inline-flex;
+  align-items: center;
+  img {
+    height: 2.5rem;
+    width: auto;
+    margin-right: 1rem;
+  }
+}
