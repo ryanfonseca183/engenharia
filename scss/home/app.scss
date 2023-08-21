@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Sura:wght@400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;700;900&display=swap");
 
 @import "button.scss";
 @import "cards.scss";
@@ -33,7 +32,7 @@ html {
 }
 body {
   color: #fff;
-  font-family: "Kanit", Arial, Helvetica, sans-serif;
+  font-family: "Inter Tight", Arial, Helvetica, sans-serif;
   background-image: url("/images/home/background.jpg");
   background-size: cover;
   background-position: top left;
