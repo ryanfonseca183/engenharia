@@ -35,7 +35,7 @@
   position: absolute;
   left: 0;
   bottom: 0;
-  font-size: calc(var(--size) / 8);
+  font-size: calc(0.75rem + 1vw);
   font-weight: 700;
   line-height: 1.2;
   white-space: nowrap;
