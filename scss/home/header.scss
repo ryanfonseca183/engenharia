@@ -5,9 +5,8 @@ header {
 }
 .page-navigation {
   display: flex;
-  align-items: center;
   flex: 1;
-  margin-right: 2rem;
+  align-items: center;
   a:not(:last-child) {
     img {
       margin-right: 1rem;
@@ -20,11 +19,16 @@ header {
 }
 @media (min-width: 768px) {
   .page-navigation {
-    .img {
-      display: inline-flex;
+    display: inline-flex;
+    flex: unset;
+    a:not(:last-child) {
+      img {
+        margin-right: 1vmin;
+      }
+    }
+    img {
       width: 2.75vmin;
       height: auto;
-      margin-right: 1vmin;
     }
   }
 }
