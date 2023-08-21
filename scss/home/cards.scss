@@ -35,13 +35,19 @@
   position: absolute;
   left: 0;
   bottom: 0;
-  font-size: calc(0.75rem + 1vw);
+  font-size: 1.25rem;
   font-weight: 700;
   line-height: 1.2;
   white-space: nowrap;
   transform: translate(-10%, -50%);
   pointer-events: none;
   text-shadow: 0 0 5px black;
+}
+@media (min-width: 768px) {
+  .title,
+  .subtitle {
+    font-size: calc(var(--size) / 8);
+  }
 }
 .image-wrapper {
   width: var(--size);
