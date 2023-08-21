@@ -46,6 +46,7 @@
       </header>
       <img src="images/logo.png" alt="Organizar Engenharia" class="logo" />
       <main>
+        <h1 class="promo-title">Engenharia</h1>
         <div class="promos">
           <div
             class="promo"
@@ -60,6 +61,7 @@
               <img src="images/home/loja/img-1.jpg" />
             </div>
             <h2 class="title">Loja Virtual</h2>
+            <h3 class="subtitle">Visitar</h3>
           </div>
           <div
             class="promo"
@@ -75,6 +77,7 @@
               </div>
             </a>
             <h2 class="title">Engenharia</h2>
+            <h3 class="subtitle">Visitar</h3>
           </div>
 
           <div
@@ -92,6 +95,7 @@
               </div>
             </a>
             <h2 class="title">Execução</h2>
+            <h3 class="subtitle">Visitar</h3>
           </div>
           <div
             class="promo"
@@ -105,9 +109,9 @@
               <img src="images/home/recarga/img-1.jpg" />
             </div>
             <h2 class="title">Recarga</h2>
+            <h3 class="subtitle">Visitar</h3>
           </div>
         </div>
-        <h1 class="promo-title">Engenharia</h1>
       </main>
     </section>
     <footer class="owl-carousel">
@@ -160,8 +164,18 @@
     </script>
     <script>
       let counter = 0;
-      $(".promo").on("mouseenter", function (e) {
-        const el = $(this);
+      const isTouchDevice =
+        navigator.maxTouchPoints || "ontouchstart" in document.documentElement;
+      function showPageContext(el) {
+        if (el.hasClass("show")) {
+          const anchor = $(el).find("> a");
+          if (anchor.prop("href")) {
+            window.location.replace(anchor.prop("href"));
+          }
+          return;
+        } else {
+          $(".show").removeClass("show");
+        }
         $(".promo-title").text(el.data("title")).addClass("show");
         counter = (counter % Number(el.data("count"))) + 1;
         const src = `images/home/${el.data("prefix")}/img-${counter}.jpg`;
@@ -171,10 +185,29 @@
           .addClass("show")
           .find("img")
           .prop("src", src);
-      });
-      $(".promo").on("mouseleave", function () {
-        $(".show").removeClass("show");
-      });
+      }
+      if (isTouchDevice) {
+        $(".promo > a").click(function (e) {
+          e.preventDefault();
+        });
+        $(document).on("touchstart", function (e) {
+          const target = $(e.target);
+          if (target.is(".promo") || target.closest(".promo").length) {
+            showPageContext(
+              target.is(".promo") ? target : target.closest(".promo")
+            );
+          } else {
+            $(".show").removeClass("show");
+          }
+        });
+      } else {
+        $(".promo").on("mouseenter", function () {
+          showPageContext($(this));
+        });
+        $(".promo").on("mouseleave", function () {
+          $(".show").removeClass("show");
+        });
+      }
     </script>
   </body>
 </html>

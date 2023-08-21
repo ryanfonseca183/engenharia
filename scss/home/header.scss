@@ -4,11 +4,27 @@ header {
   padding: 2rem 0;
 }
 .page-navigation {
-  display: inline-flex;
+  display: flex;
   align-items: center;
+  flex: 1;
+  margin-right: 2rem;
+  a:not(:last-child) {
+    img {
+      margin-right: 1rem;
+    }
+  }
   img {
-    height: auto;
-    width: 2.75vmin;
-    margin-right: 1vmin;
+    height: 2.75rem;
+    width: auto;
+  }
+}
+@media (min-width: 768px) {
+  .page-navigation {
+    .img {
+      display: inline-flex;
+      width: 2.75vmin;
+      height: auto;
+      margin-right: 1vmin;
+    }
   }
 }

@@ -38,20 +38,27 @@ body {
   background-size: cover;
   background-position: top left;
   background-repeat: no-repeat;
+  --padding-x: 3.125rem;
 }
 section {
   overflow: hidden;
-  padding: 0 3.125rem;
+  padding: 0 var(--padding-x);
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   position: relative;
 }
 main {
-  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  justify-content: flex-end;
+  margin-top: auto;
+}
+@media (min-width: 768px) {
+  main {
+    flex: 1;
+  }
 }
 .btn-primary {
   color: #fff;
@@ -63,12 +70,20 @@ main {
   font-weight: normal;
 }
 .logo {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 2;
-  height: 17.5rem;
+  width: 100%;
+  height: auto;
+  margin-top: auto;
+}
+@media (min-width: 768px) {
+  .logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    height: 17.5rem;
+    width: auto;
+  }
 }
 .owl-carousel {
   padding: 1rem;

@@ -4,7 +4,7 @@
   --def: #fff;
   --inv: rgb(109 40 217);
   position: relative;
-  padding: 0 3rem;
+  padding: 0 2rem;
   font-size: 1rem;
   height: 2.75rem;
   display: grid;
@@ -20,6 +20,11 @@
   span {
     position: relative;
     z-index: 1;
+  }
+}
+@media (min-width: 768px) {
+  .btn {
+    padding: 0 3rem;
   }
 }
 .btn:before,
