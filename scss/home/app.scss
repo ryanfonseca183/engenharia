@@ -3,7 +3,6 @@
 @import "button.scss";
 @import "cards.scss";
 @import "header.scss";
-@import "loader.scss";
 @import "overlay.scss";
 
 html {
@@ -45,6 +44,7 @@ section {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  min-height: calc(var(--vh, 1vh) * 100);
   position: relative;
 }
 main {
