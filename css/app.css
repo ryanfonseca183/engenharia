@@ -369,6 +369,20 @@ small {
   background-position: center;
 }
 
+.footer-section .footer-social {
+  display: inline-flex;
+  align-items: center;
+}
+.footer-section .footer-social img {
+  height: 1.75rem;
+  width: auto;
+}
+
+@media (min-width: 768px) {
+  .footer-section .footer-social img {
+    height: 2rem;
+  }
+}
 .page-logo {
   height: 5.35rem;
   width: auto;
