@@ -84,9 +84,11 @@ main {
     width: auto;
   }
 }
+footer {
+  background: lightgray;
+}
 .owl-carousel {
   padding: 1rem;
-  background: lightgray;
   .owl-item {
     background: lightgray;
     img {
@@ -99,4 +101,12 @@ main {
       filter: grayscale(100%);
     }
   }
+}
+.footer-copyright {
+  font-size: 80%;
+  padding: 0.5rem 1rem;
+  background: #f2f2f2;
+  color: #3f3f3f;
+  text-align: center;
+  margin: 0;
 }
