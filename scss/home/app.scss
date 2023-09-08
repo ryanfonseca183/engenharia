@@ -103,10 +103,35 @@ footer {
   }
 }
 .footer-copyright {
-  font-size: 80%;
-  padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  padding: 1rem;
   background: #f2f2f2;
   color: #3f3f3f;
-  text-align: center;
   margin: 0;
+}
+.footer-copyright h1 {
+  font-size: 1.5rem;
+}
+.footer-copyright div:last-child {
+  margin-top: 1rem;
+}
+.footer-copyright br:not(.keep) {
+  display: none;
+}
+@media (min-width: 768px) {
+  .footer-copyright br {
+    display: inline-block;
+  }
+  .footer-copyright {
+    text-align: left;
+    flex-direction: row;
+  }
+  .footer-copyright div:last-child {
+    margin-top: 0;
+    text-align: right;
+  }
 }
