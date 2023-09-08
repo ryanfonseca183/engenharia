@@ -124,7 +124,7 @@ footer {
 }
 @media (min-width: 768px) {
   .footer-copyright br {
-    display: inline-block;
+    display: inline-block !important;
   }
   .footer-copyright {
     text-align: left;
